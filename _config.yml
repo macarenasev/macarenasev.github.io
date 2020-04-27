@@ -26,4 +26,4 @@ comments: true
 disqus:
   shortname: "macarenasev-gihub-io"
 
-   
+JEKYLL_ENV: production
