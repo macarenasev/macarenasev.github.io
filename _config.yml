@@ -23,8 +23,5 @@ markdown: kramdown
 
 # Comments
 comments: true
-provider: disqus
-disqus: 
-   short_name: macarenasev.github.io
 
    
