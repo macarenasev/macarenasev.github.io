@@ -20,6 +20,13 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 
+.site-title {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.site-description {
+    font-family: 'Merriweather', serif;
+}
 
 // Use media queries like this:
 // @include media-query($on-palm) {
