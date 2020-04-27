@@ -20,12 +20,6 @@ layout: default
     {{ content }}
   </div>
   
-   {% include comment-form.html %}
-   {% assign all_comments = site.data.comments | where: "slug", page.slug %}
-   {% if all_comments.size > 0 %}
-   {% include comments.html %}
-   {% endif %}
-  
   <footer class="postNavigation">
   {% if page.previous.url %}
     <a class="postPrev" href="{{page.previous.url}}">
