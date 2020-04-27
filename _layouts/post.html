@@ -20,7 +20,9 @@ layout: default
     {{ content }}
   </div>
   
-  {% include disqus.html %}
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
 
   <footer class="postNavigation">
   {% if page.previous.url %}
