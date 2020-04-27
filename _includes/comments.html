@@ -1,29 +1,27 @@
-var url = "https://github.com/macarenasev/macarenasev.github.io/issues/" + {{ $.Params.ghcommentid }}
-var api_url = "https://api.github.com/repos/macarenasev/macarenasev.github.io/issues/" + {{ $.Params.ghcommentid }} + "/comments"
+<section class="pt2">
 
-$(document).ready(function () {
-    $.ajax(api_url, {
-        headers: {Accept: "application/vnd.github.v3.html+json"},
-        dataType: "json",
-        success: function(comments) {
-            $("#gh-comments-list").append("Visit the <b><a href='" + url + "'>Github Issue</a></b> to comment on this post");
-            $.each(comments, function(i, comment) {
+    <h2 class="f4 c-lh-title">Comments</h2>
 
-                var date = new Date(comment.created_at);
+    {% for comment in site.data.comments | where: "slug", page.slug %}
 
-                var t = "<div id='gh-comment'>";
-                t += "<img src='" + comment.user.avatar_url + "' width='24px'>";
-                t += "<b><a href='" + comment.user.html_url + "'>" + comment.user.login + "</a></b>";
-                t += " posted at ";
-                t += "<em>" + date.toUTCString() + "</em>";
-                t += "<div id='gh-comment-hr'></div>";
-                t += comment.body_html;
-                t += "</div>";
-                $("#gh-comments-list").append(t);
-            });
-        },
-        error: function() {
-            $("#gh-comments-list").append("Comments are not open for this post yet.");
-        }
-    });
-});
+    <article class="mb4 pa2 pa3-ns ba b--moon-gray c-linky-visited">
+
+        <header class="pb1 bb b--light-gray mb2">
+
+            <h3 class="f5 lh-title mt0 mb1">{{ comment.name | strip_html }}</h3>
+
+            <p class="f6 gray ma0"><time><a href="{{ page.url }}#{{ comment._id}}">{{ comment.created_at | date: "%b %-d, %Y, %H:%M" }}</a></time></p>
+
+        </header>
+
+        <div class="c-no-top-margin c-linky-underline">
+
+            {{ comment.message | strip_html | markdownify | smartify }}
+
+        </div>
+
+    </article>
+
+    {% endfor %}
+
+</section>
