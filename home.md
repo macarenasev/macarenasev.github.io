@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: Homme
+title: Home
 permalink: /home/
 category: "home"
 tagline: "let the blogging begin!"
