@@ -20,9 +20,8 @@ layout: default
     {{ content }}
   </div>
   
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
+  <script src="/js/jquery.min.js"></script>
+{% include comments.html element=".post-content" github_account="macarenasev/macarenasev.github.io" require_cookie_consent="true" %}
 
   <footer class="postNavigation">
   {% if page.previous.url %}
