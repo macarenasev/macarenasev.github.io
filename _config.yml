@@ -22,6 +22,9 @@ plugins: [jekyll-paginate, kramdown]
 markdown: kramdown
 
 # Comments
- comments: true
+comments: true
+provider: disqus
+disqus: 
+   short_name: macarenasev.github.io
 
    
