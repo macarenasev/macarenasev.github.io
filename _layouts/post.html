@@ -20,9 +20,8 @@ layout: default
     {{ content }}
   </div>
   
-  <script src="/js/jquery.min.js"></script>
-{% include comments.html element=".post-content" github_account="macarenasev/macarenasev.github.io" require_cookie_consent="true" %}
-
+  {{ partial "comments.html" . }}
+  
   <footer class="postNavigation">
   {% if page.previous.url %}
     <a class="postPrev" href="{{page.previous.url}}">
