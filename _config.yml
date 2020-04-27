@@ -24,6 +24,6 @@ markdown: kramdown
 # Comments
 comments: true
 disqus:
-  shortname: macarenasev-gihub-io
+  shortname: "macarenasev-gihub-io"
 
    
