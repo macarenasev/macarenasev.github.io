@@ -11,7 +11,7 @@ email:
 description: "I'm a Data Analyst trying to share useful insights from my data oriented experiments." 
 subdescription: "Please join me!"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "http://macarenasev.github.io" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  macarenasev
 paginate: 5
