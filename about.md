@@ -4,5 +4,7 @@ title: "About me"
 permalink: /about/
 ---
 
-Pues esta es información sobre mi.
-Aquí idealmente insertaría mi cv.
+
+<p style="font-family:Source Open Sans; font-size:14pt;"> Pues esta es información sobre mi. </p>
+
+<p style="font-family:Source Open Sans; font-size:14pt;"> Aquí idealmente insertaría mi cv. </p>
